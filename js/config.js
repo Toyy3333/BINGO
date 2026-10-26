@@ -63,11 +63,11 @@ const STORAGE_KEYS = {
 
 const SOUND_FILES = {
 
-    DRAW: "../sounds/draw.mp3",
+    DRAW: "sounds/draw.mp3",
 
-    WIN: "../sounds/win.mp3",
+    WIN: "sounds/win.mp3",
 
-    BGM: "../sounds/bgm.mp3"
+    BGM: "sounds/bgm.mp3"
 
 };
 
