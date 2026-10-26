@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BINGO ROYAL</title>
+
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- メニューボタン -->
+    <button id="menuButton">
+        ⚙
+    </button>
+
+    <!-- オーバーレイ -->
+    <div id="drawerOverlay"></div>
+
+    <!-- 設定ドロワー -->
+    <aside id="settingsDrawer">
+
+        <div class="drawerHeader">
+            <h2>設定</h2>
+
+            <button id="closeDrawer">
+                ✕
+            </button>
+        </div>
+
+        <div class="settingGroup">
+
+            <label>
+                最大番号
+            </label>
+
+            <input type="number" id="maxNumber" min="1" max="999">
+
+        </div>
+
+        <div class="settingGroup">
+
+            <label>
+                <input type="checkbox" id="soundEnabled">
+
+                効果音
+            </label>
+
+            <label>
+                <input type="checkbox" id="bgmEnabled">
+
+                BGM
+            </label>
+
+            <label>
+                <input type="checkbox" id="confettiEnabled">
+
+                紙吹雪
+            </label>
+
+            <label>
+                <input type="checkbox" id="flashEnabled">
+
+                フラッシュ
+            </label>
+
+            <label>
+                <input type="checkbox" id="voiceEnabled">
+
+                読み上げ
+            </label>
+
+            <label>
+                <input type="checkbox" id="vibrationEnabled">
+
+                バイブレーション
+            </label>
+
+        </div>
+
+        <button id="saveSettings">
+            設定保存
+        </button>
+
+    </aside>
+
+    <!-- タイトル -->
+
+    <header>
+
+        <h1>
+            BINGO ROYAL
+        </h1>
+
+    </header>
+
+    <!-- 抽選機 -->
+
+    <main>
+
+        <div class="machine">
+
+            <div id="ballDisplay">
+
+                00
+
+            </div>
+
+        </div>
+
+        <!-- ボタン群 -->
+
+        <div class="buttons">
+
+            <button id="drawBtn">
+                抽選開始
+            </button>
+
+            <button id="undoBtn">
+                1つ戻す
+            </button>
+
+            <button id="resetBtn">
+                リセット
+            </button>
+
+            <button id="fullscreenBtn">
+                全画面
+            </button>
+
+        </div>
+
+        <!-- 残り -->
+
+        <div class="status">
+
+            残り
+
+            <span id="remainCount">
+
+                99
+
+            </span>
+
+            個
+
+        </div>
+
+        <!-- 履歴 -->
+
+        <section>
+
+            <h2>
+                抽選履歴
+            </h2>
+
+            <div id="history"></div>
+
+        </section>
+
+        <!-- 番号盤 -->
+
+        <section>
+
+            <h2>
+                番号盤
+            </h2>
+
+            <div id="numberBoard"></div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/effects.js"></script>
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>
