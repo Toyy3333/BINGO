@@ -31,7 +31,7 @@ function init() {
 
     createNumberBoard();
 
-    renderHistory();
+    // renderHistory();
 
     renderRemainCount();
 
@@ -156,36 +156,36 @@ function createNumberBoard() {
  履歴描画
 */
 
-function renderHistory() {
+// function renderHistory() {
 
-    const historyArea =
-        document.getElementById(
-            "history"
-        );
+//     const historyArea =
+//         document.getElementById(
+//             "history"
+//         );
 
-    historyArea.innerHTML = "";
+//     historyArea.innerHTML = "";
 
-    history.forEach(number => {
+//     history.forEach(number => {
 
-        const item =
-            document.createElement(
-                "div"
-            );
+//         const item =
+//             document.createElement(
+//                 "div"
+//             );
 
-        item.className =
-            "historyItem";
+//         item.className =
+//             "historyItem";
 
-        item.textContent =
-            String(number)
-                .padStart(2, "0");
+//         item.textContent =
+//             String(number)
+//                 .padStart(2, "0");
 
-        historyArea.appendChild(
-            item
-        );
+//         historyArea.appendChild(
+//             item
+//         );
 
-    });
+//     });
 
-}
+// }
 
 /*
  残数表示
@@ -330,7 +330,7 @@ function finishDraw(number) {
 
     highlightNumber(number);
 
-    renderHistory();
+    // renderHistory();
 
     renderRemainCount();
 
@@ -373,7 +373,7 @@ function undoLastNumber() {
         lastNumber
     );
 
-    renderHistory();
+    // renderHistory();
 
     renderRemainCount();
 
@@ -409,7 +409,7 @@ function resetGame() {
 
     createNumberBoard();
 
-    renderHistory();
+    // renderHistory();
 
     renderRemainCount();
 
