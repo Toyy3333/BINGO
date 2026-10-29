@@ -519,13 +519,31 @@ function initializeDrawer() {
             "click",
             () => {
 
-                drawer.classList.add(
-                    "open"
-                );
+                if (
+                    drawer.classList.contains(
+                        "open"
+                    )
+                ) {
 
-                overlay.classList.add(
-                    "show"
-                );
+                    drawer.classList.remove(
+                        "open"
+                    );
+
+                    overlay.classList.remove(
+                        "show"
+                    );
+
+                } else {
+
+                    drawer.classList.add(
+                        "open"
+                    );
+
+                    overlay.classList.add(
+                        "show"
+                    );
+
+                }
 
             }
         );

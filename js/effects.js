@@ -37,10 +37,31 @@ function playSound(path) {
  抽選音
 */
 
+let lastDrawSound = -1;
+
 function playDrawSound() {
 
+    let index;
+
+    do {
+
+        index =
+            Math.floor(
+                Math.random() *
+                SOUND_FILES.DRAW.length
+            );
+
+    } while (
+
+        index === lastDrawSound &&
+        SOUND_FILES.DRAW.length > 1
+
+    );
+
+    lastDrawSound = index;
+
     playSound(
-        SOUND_FILES.DRAW
+        SOUND_FILES.DRAW[index]
     );
 
 }
@@ -49,10 +70,31 @@ function playDrawSound() {
  当選音
 */
 
+let lastWinSound = -1;
+
 function playWinSound() {
 
+    let index;
+
+    do {
+
+        index =
+            Math.floor(
+                Math.random() *
+                SOUND_FILES.WIN.length
+            );
+
+    } while (
+
+        index === lastWinSound &&
+        SOUND_FILES.WIN.length > 1
+
+    );
+
+    lastWinSound = index;
+
     playSound(
-        SOUND_FILES.WIN
+        SOUND_FILES.WIN[index]
     );
 
 }
@@ -349,5 +391,20 @@ function showToast(message) {
         toast.remove();
 
     }, 2500);
+
+}
+
+// 効果音ランダム 
+function getRandomSound(
+    soundList
+) {
+
+    const index =
+        Math.floor(
+            Math.random() *
+            soundList.length
+        );
+
+    return soundList[index];
 
 }

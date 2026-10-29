@@ -63,9 +63,51 @@ const STORAGE_KEYS = {
 
 const SOUND_FILES = {
 
-    DRAW: "sounds/draw.mp3",
+    DRAW: [
 
-    WIN: "sounds/win.mp3",
+        "sounds/draw1.mp3",
+
+        "sounds/draw2.mp3",
+
+        "sounds/draw3.mp3",
+
+        "sounds/draw4.mp3",
+
+        "sounds/draw5.mp3",
+
+        "sounds/draw6.mp3",
+
+        "sounds/draw7.mp3",
+
+        "sounds/draw8.mp3",
+
+        "sounds/draw9.mp3",
+
+        "sounds/draw10.mp3",
+
+        "sounds/draw11.mp3",
+
+    ],
+
+    WIN: [
+
+        "sounds/win1.mp3",
+
+        "sounds/win2.mp3",
+
+        "sounds/win3.mp3",
+
+        "sounds/win4.mp3",
+
+        "sounds/win5.mp3",
+
+        "sounds/win6.mp3",
+
+        "sounds/win7.mp3",
+
+        "sounds/win8.mp3",
+
+    ],
 
     BGM: "sounds/bgm.mp3"
 
